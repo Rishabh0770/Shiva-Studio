@@ -1,0 +1,42 @@
+.masonry-gallery {
+  column-count: 1;
+  column-gap: 1rem;
+}
+
+.masonry-gallery a {
+  display: inline-block;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.masonry-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.masonry-gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive columns */
+@media (min-width: 576px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .masonry-gallery {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 992px) {
+  .masonry-gallery {
+    column-count: 4;
+  }
+}

@@ -1,0 +1,574 @@
+/* Root theme variables */
+:root {
+  --bg: #ffffff;
+  --text: #0b0b0b;
+  --muted: #6c757d;
+  --card: #f8f9fa;
+  --accent: #8bf; /* requested */
+  --accent-600: #5fb6ff;
+  --border: rgba(0,0,0,.08);
+  --section-title-color: #5fb6ff;
+  --placeholder: #6c757d;
+}
+
+html[data-theme="dark"] {
+  --bg: #0b0b0b;
+  --text: #f6f7fb;
+  --muted: #c9cbd1;
+  --card: #151515;
+  --accent: #8bf; /* requested */
+  --accent-600: #5fb6ff;
+  --border: rgba(255,255,255,.1);
+  --placeholder: #a3a3a3;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Inter, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+.section-padding p,
+.section-padding span,
+.section-padding small,
+.section-padding blockquote,
+.section-padding .text-muted,
+.section-padding .card-title,
+.section-padding .card-text,
+.section-padding .lead {
+  color: var(--text) !important;
+}
+.section-title {
+  color: var(--section-title-color) !important;
+}
+/* Navbar Background */
+.bg-body-blur {
+  backdrop-filter: saturate(180%) blur(10px);
+  background: color-mix(in oklab, var(--bg) 70%, transparent);
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+  margin-left: 65px; /* Adjust this value as needed */
+}
+
+html[data-theme="light"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23000000' stroke-width='2' d='M4 7h22 M4 15h22 M4 23h22' /%3E%3C/svg%3E");
+}
+
+html[data-theme="light"] .navbar-toggler {
+  border: 2px solid #000000;
+}
+
+html[data-theme="light"] .navbar-toggler:hover {
+  background-color: #ff6f61; /* subtle hover glow */
+}
+
+/* Dark mode: orange border + icon color */
+html[data-theme="dark"] .navbar-toggler {
+  border: 2px solid #ffffff;
+}
+
+html[data-theme="dark"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+html[data-theme="dark"] .navbar-toggler:hover {
+  background-color: #ff6f61; /* subtle hover glow */
+}
+
+/* Nav Links */
+.navbar .nav-link {
+  color: var(--text);
+  opacity: 0.85;
+  font-weight: 600;                  /* Make it semi-bold */
+  text-decoration: none;             /* No underline by default */
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Hover and Focus */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  opacity: 1;
+  color: #ff6f61;
+  text-decoration: underline;        /* Underline on hover */
+  text-decoration-color: #ff6f61;   /* Underline color */
+  text-underline-offset: 4px;
+}
+
+/* Active Link Styling (when section is active) */
+.navbar .nav-link.active {
+  color: #ff6f61;
+  text-decoration: underline;
+  text-decoration-color: #ff6f61;
+  text-underline-offset: 4px;
+  opacity: 1;
+}
+
+/* Brand Link */
+.navbar .navbar-brand {
+  color: var(--text);
+}
+
+.brand-hover {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.brand-hover:hover {
+  color: #ff6f61;
+}
+
+/* Custom button for theme toggle */
+.btn-theme-toggle {
+  color: var(--text);
+  border: 1px solid var(--border);
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.btn-theme-toggle:hover {
+  background-color: #ff6f61;
+  color: #ffffff;
+  border-color: #ff6f61;
+}
+
+
+/* Hero Section */
+.hero-section {
+  min-height: 92vh;
+  display: grid;
+  align-items: center;
+  position: relative;
+  padding-top: 72px; /* space for fixed navbar */
+  overflow: hidden;
+}
+
+/* Background Images */
+.hero-slider-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -2;
+}
+
+.hero-bg.active {
+  opacity: 1;
+  z-index: -1;
+}
+
+/* Gradient Overlay */
+.hero-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35));
+  z-index: -1;
+}
+
+/* Hero Text */
+.hero-section h1,
+.hero-section p {
+  color: #fff;
+}
+
+/* Dot Indicators */
+.hero-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hero-dots .dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5); /* default dot color */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-dots .dot.active,
+.hero-dots .dot:hover {
+  background-color: #ff6f61; /* Brand coral color on active/hover */
+}
+
+/* Profile Image Zoom */
+.zoom-img {
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+.zoom-img:hover {
+  transform: scale(1.05); /* You can increase scale for stronger zoom */
+}
+
+/* Sections */
+.section-padding { padding: 80px 0; scroll-margin-top: 90px; }
+.bg-section { background: var(--card); }
+
+/* Titles */
+.section-title {
+  font-weight: 800;
+  letter-spacing: .2px;
+  margin-bottom: .5rem;
+}
+
+.accent { color: var(--accent-600); }
+
+.service-card {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Icon transition */
+.service-card .card-body i {
+  color: var(--accent-600);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-600);
+   border-width: 2px;
+}
+
+/* Optional: animate icon slightly on hover */
+.service-card:hover .card-body i {
+  transform: scale(1.2);
+  color: var(--accent-600); /* already set, but keeps the effect consistent */
+}
+
+/* Zoom-in effect for gallery images */
+#galleryGrid .col-6 a {
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+#galleryGrid img {
+  transition: transform 0.4s ease, filter 0.3s ease;
+  will-change: transform;
+}
+
+#galleryGrid a:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+/* Custom Hover Styles ONLY for View Gallery button */
+/* Zoom in-out keyframe animation */
+@keyframes zoomPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/* Apply animation to only the gallery button */
+.gallery-btn {
+  animation: zoomPulse 1.5s ease-in-out infinite;
+  transition: all 0.3s ease;
+  background-color: #5fb6ff;  /* Match your theme */
+  color: #fff;                /* Text color */
+  border: none;
+  
+}
+
+/* Optional: Hover override to reduce conflict */
+.gallery-btn:hover {
+  background-color: #e85a51;
+  color: #000000;
+  transform: scale(1.1);
+}
+
+.btn-accent {
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-color: #081018;
+  --bs-btn-hover-bg: var(--accent-600);
+  --bs-btn-hover-border-color: var(--accent-600);
+  --bs-btn-font-weight: 600;
+}
+
+.btn-outline-light {
+  color: #ffffff;                   /* default text color */
+  border-color: #ffffff;           /* default border */
+  background-color: transparent;   /* default background */
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-outline-light:hover {
+  color: #000000;                  /* keep text white */
+  background-color: #ff6f61;       /* change background */
+  border-color: #ff6f61;           /* change border */
+  animation: zoomInOut 2s ease-in-out infinite;
+}
+
+@keyframes zoomInOut {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.btn-hover-zoom {
+  animation: zoomInOut 2.5s ease-in-out infinite;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card {
+  background-color: var(--card); /* Use defined --card not --bg-card */
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect: border color + optional lift effect */
+.card:hover {
+  border-color: var(--accent-600);  /* Your blue */
+  border-width: 2px;                /* Slightly thicker */
+  transform: translateY(-4px);      /* Small lift */
+  box-shadow: 0 8px 24px rgba(95, 182, 255, 0.25); /* Soft blue glow */
+}
+
+#testimonials .card {
+  min-height: 320px;
+  border: 2px solid #5fb6ff; /* Remove default border */
+  border-radius: 12px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  max-width: 500px; /* or any size you like */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Make arrows transparent and theme-aware */
+#testimonials .carousel-control-prev-icon,
+#testimonials .carousel-control-next-icon {
+  background-color: transparent;
+  background-size: 80% 80%;
+  filter: invert(1); /* Default: white for dark backgrounds */
+}
+
+/* Light Theme: Show dark arrows */
+html[data-theme="light"] #testimonials .carousel-control-prev-icon,
+html[data-theme="light"] #testimonials .carousel-control-next-icon {
+  filter: invert(1); /* Dark arrows for light bg */
+}
+
+/* Dark Theme: Show light arrows */
+html[data-theme="dark"] #testimonials .carousel-control-prev-icon,
+html[data-theme="dark"] #testimonials .carousel-control-next-icon {
+  filter: invert(0); /* Light arrows for dark bg */
+}
+
+/* Adjust arrow button position and size */
+#testimonials .carousel-control-prev,
+#testimonials .carousel-control-next {
+  width: 40px; /* Shrink clickable area */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Position arrows closer to the card */
+#testimonials .carousel-control-prev {
+  left: 300px; /* Move closer to card */
+}
+
+#testimonials .carousel-control-next {
+  right: 300px; /* Move closer to card */
+}
+
+
+#testimonials img {
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+#testimonials .card:hover {
+  border: 2px solid #ff6f61; /* Border only on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(95, 182, 255, 0.25);
+}
+
+#testimonials .carousel-inner {
+  overflow: visible;
+}
+
+html[data-theme="light"] .carousel-indicators [data-bs-target] {
+  background-color: #000;
+}
+
+html[data-theme="dark"] .carousel-indicators [data-bs-target] {
+  background-color: #ff6f61;
+}
+
+/* Mobile: Adjust arrows to stay near card edges */
+@media (max-width: 768px) {
+  #testimonials .carousel-control-prev {
+    left: 10px;
+  }
+
+  #testimonials .carousel-control-next {
+    right: 10px;
+  }
+
+  /* Optional: Reduce card width on small screens */
+  #testimonials .card {
+    max-width: 90%;
+  }
+}
+
+/* Equipment */
+.equip-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: 
+    border-color 0.3s ease, 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease;
+  color: var(--text);
+  transform: scale(1);
+}
+.equip-card i { 
+  color: var(--accent-600);
+  transition: transform 0.3s ease;
+ }
+
+ .equip-card i {
+  transition: transform 0.5s ease;
+}
+
+.equip-card:hover i {
+  transform: scale(1.5);
+}
+
+/* Hover effect equipment cards */
+.equip-card:hover {
+  border-color: var(--accent-600);  /* Blue border on hover */
+  border-width: 2px;
+  transform: scale(1.03) translateY(-4px); /* Slight zoom + lift */
+  box-shadow:
+    0 0 8px rgba(95, 182, 255, 0.5),
+    0 0 16px rgba(95, 182, 255, 0.2),
+    0 8px 24px rgba(95, 182, 255, 0.25)
+}
+
+.equipment-link {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.equipment-link {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.equipment-link:hover {
+  color: var(--secondary-color); /* or #5fb6ff */
+  text-decoration: underline;
+}
+
+/* Contact */
+#contact .form-control, #contact .form-select {
+  background-color: var(--bg);
+  color: var(--text);
+  border-color: var(--border);
+}
+#contact .form-control:focus {
+  box-shadow: 0 0 0 .25rem color-mix(in oklab, var(--accent-600) 25%, transparent);
+  border-color: var(--accent-600);
+}
+
+/* Placeholder Styling */
+::placeholder {
+  color: var(--placeholder);
+  opacity: 0.3; /* Ensures visibility */
+}
+
+html[data-theme="dark"] ::placeholder {
+  color: var(--muted);
+  opacity: 0.3;
+}
+
+/* Social Links */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--accent-600);
+  border-color: var(--accent-600);
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(95, 182, 255, 0.25);
+}
+
+.social-link:hover i {
+  transform: scale(1.3);
+}
+
+
+/* Footer */
+footer { background: var(--bg); }
+
+footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Utilities */
+.shadow-sm { box-shadow: 0 6px 24px rgba(0,0,0,.08) !important; }
+.rounded-3 { border-radius: 1rem !important; }
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
