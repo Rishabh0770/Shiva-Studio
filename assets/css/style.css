@@ -51,6 +51,11 @@ body {
   color: var(--section-title-color) !important;
 }
 
+.navbar {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 #mainNavbar {
   position: fixed;
   width: 100%;
