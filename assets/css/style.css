@@ -662,15 +662,13 @@ footer a strong:hover {
   }
 }
 
-
 @media (max-width: 576px) {
-  /* Center content inside the hero section */
+  /* ===== HERO SECTION ===== */
   .hero-section .row {
     justify-content: center;
     text-align: center;
   }
 
-  /* Stack buttons vertically */
   .hero-section .d-flex.gap-3 {
     flex-direction: column;
     align-items: center;
@@ -679,12 +677,11 @@ footer a strong:hover {
   }
 
   .hero-section .btn {
-    width: 80%; /* Optional: makes buttons wider on small screen */
+    width: 80%;
     max-width: 280px;
   }
-}
 
-@media (max-width: 576px) {
+  /* ===== ABOUT SECTION ===== */
   #about .row {
     text-align: center;
   }
@@ -706,10 +703,8 @@ footer a strong:hover {
     margin-right: auto;
     display: block;
   }
-}
 
-
-@media (max-width: 576px) {
+  /* ===== SERVICES SECTION ===== */
   #services .card.service-card {
     padding: 1rem 0.5rem;
   }
@@ -731,17 +726,13 @@ footer a strong:hover {
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
   }
-}
 
-
-@media (max-width: 576px) {
-  /* Stack gallery images 2 per row */
+  /* ===== GALLERY SECTION ===== */
   #gallery .row > [class*="col-6"] {
     flex: 0 0 50%;
     max-width: 50%;
   }
 
-  /* Ensure proper spacing and responsive images */
   #gallery img {
     width: 100%;
     height: auto;
@@ -758,22 +749,17 @@ footer a strong:hover {
     line-height: 1.5;
   }
 
-  /* View More Button */
   #gallery .btn {
     font-size: 1rem;
     padding: 0.6rem 1.2rem;
   }
 
-  /* Reduce gap between items if needed */
   #gallery .g-3 {
     --bs-gutter-x: 0.75rem;
     --bs-gutter-y: 1rem;
   }
-}
 
-
-@media (max-width: 576px) {
-  /* Section Title & Subtitle */
+  /* ===== TESTIMONIALS SECTION ===== */
   #testimonials .section-title {
     font-size: 1.6rem;
   }
@@ -782,7 +768,6 @@ footer a strong:hover {
     font-size: 1rem;
   }
 
-  /* Testimonial Card */
   #testimonials .card {
     padding: 1.25rem 1rem;
   }
@@ -805,7 +790,6 @@ footer a strong:hover {
     padding: 0 0.5rem;
   }
 
-  /* Carousel Indicators */
   #testimonials .carousel-indicators button {
     width: 8px;
     height: 8px;
@@ -813,19 +797,16 @@ footer a strong:hover {
   }
 
   #testimonials .carousel-indicators {
-  position: absolute;
-  bottom: -11.2px; /* pushes them lower than the carousel */
-}
+    position: absolute;
+    bottom: -11.2px;
+  }
 
-  /* Carousel Controls */
   #testimonials .carousel-control-prev-icon,
   #testimonials .carousel-control-next-icon {
     background-size: 80% 80%;
   }
-}
 
-
-@media (max-width: 576px) {
+  /* ===== EQUIPMENTS SECTION ===== */
   #equipments .equip-card {
     text-align: center;
     padding: 1.5rem 1rem;
@@ -850,14 +831,12 @@ footer a strong:hover {
     padding: 4px 0;
   }
 
-  /* Optional: Add spacing between rows of cards on mobile */
   #equipments .col-md-6 {
     margin-bottom: 1rem;
   }
-}
 
-@media (max-width: 768px) {
-  #contact .form-control, 
+  @media (max-width: 768px) {
+  #contact .form-control,
   #contact textarea {
     font-size: 0.9rem;
   }
@@ -879,7 +858,7 @@ footer a strong:hover {
     padding: 0.35rem 0.5rem;
   }
 
-   #contact .social-link-container {
+  #contact .social-link-container {
     justify-content: center !important;
   }
 
@@ -888,14 +867,14 @@ footer a strong:hover {
   }
 }
 
-@media (max-width: 576px) {
+  /* ===== FOOTER ===== */
   footer .small {
-    font-size: 13px; /* Slightly smaller font on mobile */
+    font-size: 13px;
     line-height: 1.5;
   }
 
   .heartbeat {
-    font-size: 16px; /* Adjust heart size slightly */
+    font-size: 16px;
   }
 
   footer .container {
@@ -903,3 +882,4 @@ footer a strong:hover {
     padding-right: 10px;
   }
 }
+
