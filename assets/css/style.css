@@ -51,6 +51,12 @@ body {
   color: var(--section-title-color) !important;
 }
 
+.navbar{
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 #mainNavbar {
   position: fixed;
   width: 100%;
@@ -72,6 +78,12 @@ body {
 
 .hero-content h1 {
   font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
 }
 
 /* Navbar Background */
@@ -662,8 +674,3 @@ footer .container {
   }
 }
 
-@media (min-width: 768px) {
-  .hero-content h1 {
-    font-size: 3rem;
-  }
-}
