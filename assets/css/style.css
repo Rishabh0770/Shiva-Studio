@@ -27,7 +27,7 @@ html[data-theme="dark"] {
 }
 
 * { box-sizing: border-box;
-outline: 1px solid red; }
+outline: 1px solid green; }
 html, body { height: 100%; scroll-behavior: smooth;}
 body {
   background: var(--bg);
@@ -50,10 +50,11 @@ body {
   color: var(--section-title-color) !important;
 }
 
-.navbar{
-  width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
+.navbar,
+.container-fluid{
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 #mainNavbar {
@@ -93,12 +94,14 @@ body {
 
 #themeToggle,.navbar-toggler {
   border: none;
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem;
   margin-inline-start: auto;
   animation: none !important;
   transform: none !important;
   max-width: 100%; /* Adjust as needed */
   box-sizing: border-box;
+  font-size: 1.25rem;
+  outline: none;
 }
 
 html[data-theme="light"] .navbar-toggler-icon {
