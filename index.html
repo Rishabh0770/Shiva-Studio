@@ -64,22 +64,22 @@
 
   <body>
     <!-- ======= Navbar ======= -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-body-blur border-bottom">
-      <div class="container">
-        <a class="navbar-brand fw-bold brand-hover" href="#home"><strong>Shiva Studio</strong></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="mainNavbar">
+  <div class="container"> <!-- ✅ ADDED -->
+    <a class="navbar-brand fw-bold" href="#">Shiva Studio</a>
 
-        <div class="d-flex align-items-center gap-2 order-lg-2">
-          <button id="themeToggle" class="btn btn-theme-toggle btn-sm" aria-label="Toggle theme">
-    <i class="fa-solid fa-moon"></i>
-  </button>
+    <div class="d-flex align-items-center ms-auto">
+      <button class="btn btn-sm me-2" id="themeToggle" title="Toggle Theme">
+        <i class="bi bi-brightness-high"></i>
+      </button>
 
-        </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
 
-        <div class="collapse navbar-collapse order-lg-1" id="mainNav">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+        <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>

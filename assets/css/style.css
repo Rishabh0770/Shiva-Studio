@@ -51,6 +51,36 @@ body {
 .section-title {
   color: var(--section-title-color) !important;
 }
+
+#mainNavbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  background-color: var(--bg);
+  transition: background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.hero-content {
+  padding: 3rem 1rem;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+}
+
 /* Navbar Background */
 .bg-body-blur {
   backdrop-filter: saturate(180%) blur(10px);
@@ -605,6 +635,19 @@ footer .container {
   }
   .social-link {
     margin: 4px;
+  }
+}
+@media (max-width: 576px) {
+  .navbar {
+    padding-inline: 0.75rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .btn-theme-toggle {
+    margin-left: 0.5rem;
   }
 }
 
