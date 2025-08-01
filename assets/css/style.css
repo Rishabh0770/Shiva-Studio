@@ -27,7 +27,7 @@ html[data-theme="dark"] {
 }
 
 * { box-sizing: border-box;
-outline: 1px solid green; }
+outline: 1px solid red; }
 html, body { height: 100%; scroll-behavior: smooth; max-width: 100%;}
 body {
   background: var(--bg);
@@ -50,11 +50,13 @@ body {
   color: var(--section-title-color) !important;
 }
 
-.navbar,
-.container-fluid{
+/* Navbar: fix overflow and align icons */
+.navbar {
+  width: 100vw;
   max-width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  overflow-x: hidden;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #mainNavbar {
@@ -679,3 +681,25 @@ footer .container {
   }
 }
 
+/* Fix navbar overflow on mobile */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+  }
+  .navbar-collapse {
+    width: 100% !important;
+  }
+  .navbar-nav .nav-link {
+    width: 100%;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .navbar .d-flex {
+    justify-content: center !important;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
