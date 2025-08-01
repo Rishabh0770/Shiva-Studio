@@ -7,6 +7,7 @@
   display: inline-block;
   margin-bottom: 1rem;
   width: 100%;
+   break-inside: avoid;
 }
 
 .masonry-gallery img {
@@ -19,7 +20,7 @@
 }
 
 .masonry-gallery img:hover {
-  transform: scale(1.02);
+  transform: scale(1.02) translateY(-2px);
 }
 
 /* Responsive columns */
@@ -38,5 +39,13 @@
 @media (min-width: 992px) {
   .masonry-gallery {
     column-count: 4;
+  }
+}
+
+@media (min-width: 1400px) {
+  .masonry-gallery {
+    column-count: 5;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 }

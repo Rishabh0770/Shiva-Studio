@@ -37,6 +37,10 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Inter, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   overflow-x: hidden;
 }
+html {
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
 
 .section-padding p,
 .section-padding span,
@@ -283,11 +287,12 @@ html, body {
 
 /* Titles */
 .section-title {
-  font-weight: 800;
-  letter-spacing: .2px;
-  margin-bottom: .5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--section-title-color);
+  margin-bottom: 10px;
+  text-align: center;
 }
-
 .accent { color: var(--accent-600); }
 
 .service-card {
@@ -603,6 +608,14 @@ html[data-theme="dark"] ::placeholder {
 
 .social-link:hover i {
   transform: scale(1.3);
+}
+
+#form-message {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+#form-message.show {
+  opacity: 1;
 }
 
 

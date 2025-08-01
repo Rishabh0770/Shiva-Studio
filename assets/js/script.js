@@ -35,17 +35,6 @@
   }
 })();
 
-// AOS Initialization
-document.addEventListener("DOMContentLoaded", function () {
-  AOS.init({
-    duration: 1000,         // Animation duration in ms
-    once: false,            // Allow animation to trigger on scroll up too
-    mirror: true,           // Animate while scrolling past
-    easing: 'ease-in-out',  // Easing function
-    offset: 100             // Offset (px) from the trigger point
-  });
-});
-
 // =========================
 // DOMContentLoaded Section
 // =========================
@@ -120,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
           form.classList.remove("was-validated");
           statusText.classList.remove("d-none", "text-danger");
           statusText.classList.add("text-success");
-          statusText.textContent = "Thanks! We’ll reach out soon.";
+          statusText.textContent = "Thank you! Your message has been sent. We’ll reach out soon.";
         } else {
           statusText.classList.remove("d-none", "text-success");
           statusText.classList.add("text-danger");
