@@ -642,7 +642,6 @@ footer .container {
     margin: 4px;
   }
 }
-
 @media (max-width: 576px) {
   .navbar {
     padding-inline: 0.75rem;
