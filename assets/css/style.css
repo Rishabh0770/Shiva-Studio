@@ -617,6 +617,20 @@ footer .container {
   text-align: center;
 }
 
+.heartbeat {
+  display: inline-block;
+  animation: heartbeat 1.6s infinite;
+  transform-origin: center;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
+}
+
 /* Utilities */
 .shadow-sm { box-shadow: 0 6px 24px rgba(0,0,0,.08) !important; }
 .rounded-3 { border-radius: 1rem !important; }
@@ -866,5 +880,21 @@ footer .container {
 
   #contact small {
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  footer .small {
+    font-size: 13px; /* Slightly smaller font on mobile */
+    line-height: 1.5;
+  }
+
+  .heartbeat {
+    font-size: 16px; /* Adjust heart size slightly */
+  }
+
+  footer .container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
