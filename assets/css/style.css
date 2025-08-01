@@ -9,6 +9,9 @@
   --border: rgba(0,0,0,.08);
   --section-title-color: #5fb6ff;
   --placeholder: #6c757d;
+  --transition-smooth: all 0.3s ease-in-out;
+  --hover-accent: #ff6f61;
+  --focus-ring: color-mix(in oklab, var(--accent-600) 25%, transparent);
 }
 
 html[data-theme="dark"] {
@@ -20,6 +23,7 @@ html[data-theme="dark"] {
   --accent-600: #5fb6ff;
   --border: rgba(255,255,255,.1);
   --placeholder: #a3a3a3;
+   --hover-accent: #ff6f61; /* Optional override */
 }
 
 * { box-sizing: border-box; }
@@ -52,7 +56,21 @@ body {
 .navbar-toggler {
   border: none;
   padding: 0.5rem;
-  margin-left: 65px; /* Adjust this value as needed */
+  margin-left: auto;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: none !important; /* Prevents accidental animation */
+  transform: none !important;  /* Prevents animation leaking */
+}
+
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
 }
 
 html[data-theme="light"] .navbar-toggler-icon {
