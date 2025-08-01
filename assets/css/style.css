@@ -860,6 +860,10 @@ footer .container {
     padding: 0.35rem 0.5rem;
   }
 
+   #contact .social-link-container {
+    justify-content: center !important;
+  }
+
   #contact small {
     font-size: 0.85rem;
   }
