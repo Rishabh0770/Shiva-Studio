@@ -27,8 +27,8 @@ html[data-theme="dark"] {
 }
 
 * { box-sizing: border-box;
-outline: 1px solid green; }
-html, body { height: 100%; scroll-behavior: smooth;}
+outline: 1px solid red; }
+html, body { height: 100%; scroll-behavior: smooth; max-width: 100%;}
 body {
   background: var(--bg);
   color: var(--text);
@@ -55,7 +55,6 @@ body {
   max-width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
-  overflow-x: hidden;
 }
 
 #mainNavbar {
@@ -95,14 +94,17 @@ body {
 
 #themeToggle,.navbar-toggler {
   border: none;
-  padding: 0.25rem 0.5rem;
-  margin-inline-start: auto;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
   animation: none !important;
   transform: none !important;
-  max-width: 100%; /* Adjust as needed */
+  width: auto;
   box-sizing: border-box;
   font-size: 1.25rem;
   outline: none;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
 }
 
 html[data-theme="light"] .navbar-toggler-icon {
