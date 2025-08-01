@@ -23,7 +23,7 @@ html[data-theme="dark"] {
 }
 
 * { box-sizing: border-box;
-outline: 1px solid yellow; }
+outline: 1px solid red; }
 html, body { height: 100%; scroll-behavior: smooth; }
 body {
   background: var(--bg);
@@ -45,6 +45,20 @@ body {
 .section-title {
   color: var(--section-title-color) !important;
 }
+
+/* Prevent icon & layout flickering */
+.navbar, .navbar * {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* Make sure toggle icons don’t jump */
+button.navbar-toggler,
+.btn-theme-toggle {
+  transform: translateZ(0);
+}
+
 /* Navbar Background */
 .bg-body-blur {
   backdrop-filter: saturate(180%) blur(10px);
