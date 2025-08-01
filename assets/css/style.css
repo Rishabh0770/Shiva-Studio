@@ -631,6 +631,11 @@ footer .container {
   70% { transform: scale(1); }
 }
 
+footer a strong:hover {
+  color: #ff6f61;
+  transform: scale(1.05);
+}
+
 /* Utilities */
 .shadow-sm { box-shadow: 0 6px 24px rgba(0,0,0,.08) !important; }
 .rounded-3 { border-radius: 1rem !important; }
