@@ -23,7 +23,7 @@ html[data-theme="dark"] {
 }
 
 * { box-sizing: border-box;
-outline: 1px solid red; }
+outline: 1px solid green; }
 html, body { height: 100%; scroll-behavior: smooth; }
 body {
   background: var(--bg);
@@ -42,6 +42,16 @@ body {
 .section-padding .lead {
   color: var(--text) !important;
 }
+
+/* Target only navbar container */
+.navbar > .container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
 .section-title {
   color: var(--section-title-color) !important;
 }
