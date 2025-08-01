@@ -60,7 +60,7 @@ body {
 .navbar-toggler {
   border: none;
   padding: 0.5rem;
-  margin-left: 65px; /* Adjust this value as needed */
+  margin-inline-start: auto;
   animation: none !important;
   transform: none !important
 }
@@ -582,3 +582,30 @@ footer .container {
 @media (prefers-reduced-motion: reduce) {
   [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
+
+
+@media (max-width: 576px) {
+  .section-padding { padding: 60px 0; }
+  .hero-section h1 { font-size: 2rem; }
+  .hero-section p { font-size: 1rem; }
+  .navbar-toggler { padding: 0.75rem; }
+  #galleryGrid .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .equip-card:hover {
+    transform: scale(1.01) translateY(-2px);
+  }
+  .gallery-btn, .btn-hover-zoom, .btn-outline-light:hover {
+    animation: none !important;
+  }
+  footer .container {
+    padding: 1rem;
+    flex-direction: column;
+  }
+  .social-link {
+    margin: 4px;
+  }
+}
+
+
