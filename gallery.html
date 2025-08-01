@@ -27,33 +27,36 @@
 <body>
 
  <!-- ======= Navbar ======= -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-body-blur border-bottom">
-    <div class="container">
-      <a class="navbar-brand fw-bold brand-hover" href="index.html"><strong>Shiva Studio</strong></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<nav class="navbar navbar-expand-lg fixed-top theme-navbar" style="width: 100%; overflow-x: hidden;">
+  <div class="container-fluid px-3 d-flex justify-content-between align-items-center">
+    <a class="navbar-brand fw-bold" href="#home">Shiva Studio</a>
 
-      <div class="d-flex align-items-center gap-2 order-lg-2">
-        <button id="themeToggle" class="btn btn-theme-toggle btn-sm" aria-label="Toggle theme">
+    <div class="d-flex align-items-center gap-2">
+      <!-- Theme Toggle -->
+      <button id="themeToggle" class="btn btn-theme-toggle btn-sm" aria-label="Toggle theme">
   <i class="fa-solid fa-moon"></i>
 </button>
 
-      </div>
 
-      <div class="collapse navbar-collapse order-lg-1" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html/#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html/#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html/#testimonials">Testimonials</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html/#equipments">Equipments</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html/#contact">Contact</a></li>
-        </ul>
-      </div>
+      <!-- Navbar Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
-  </nav>
+  </div>
+
+  <div class="collapse navbar-collapse" id="mainNav">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="#equipments">Equipments</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+       </ul>
+  </div>
+</nav>
 
 <!-- ======= Full Gallery Section ======= -->
 <section class="section-padding bg-section" id="fullGallery">

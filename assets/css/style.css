@@ -625,3 +625,42 @@ footer .container {
 @media (prefers-reduced-motion: reduce) {
   [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
+
+
+/* media queries */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    text-align: center;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+}
+
+
+@media (max-width: 576px) {
+  /* Center content inside the hero section */
+  .hero-section .row {
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Stack buttons vertically */
+  .hero-section .d-flex.gap-3 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hero-section .btn {
+    width: 80%; /* Optional: makes buttons wider on small screen */
+    max-width: 280px;
+  }
+}
