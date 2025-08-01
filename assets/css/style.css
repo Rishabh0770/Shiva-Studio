@@ -664,3 +664,52 @@ footer .container {
     max-width: 280px;
   }
 }
+
+@media (max-width: 576px) {
+  #about .row {
+    text-align: center;
+  }
+
+  #about .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  #about img {
+    margin-bottom: 1.5rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+
+@media (max-width: 576px) {
+  #services .card.service-card {
+    padding: 1rem 0.5rem;
+  }
+
+  #services .card-title {
+    font-size: 1.1rem;
+  }
+
+  #services .card-text {
+    font-size: 0.9rem;
+  }
+
+  #services .row > [class*="col-6"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  #services .fa-2x {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+}
