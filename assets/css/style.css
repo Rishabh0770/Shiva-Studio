@@ -51,17 +51,7 @@ body {
   color: var(--section-title-color) !important;
 }
 
-.navbar {
-  width: 100%;
-  overflow-x: hidden; /* Optional, only if there's overflow */
-  box-sizing: border-box;
-}
 
-.container {
-  /* Let Bootstrap handle container width and padding */
-  max-width: 100%; /* Optional: remove this if using Bootstrap's default breakpoints */
-  box-sizing: border-box;
-}
 
 #mainNavbar {
   position: fixed;
@@ -228,10 +218,6 @@ html[data-theme="dark"] .navbar-toggler:hover {
 .hero-bg.active {
   opacity: 1;
   z-index: -1;
-}
-
-.hero-section {
-  padding-top: 100px; /* Adjust based on navbar height */
 }
 
 /* Gradient Overlay */
