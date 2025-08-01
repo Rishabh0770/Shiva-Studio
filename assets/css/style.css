@@ -713,3 +713,41 @@ footer .container {
     margin-bottom: 0.75rem;
   }
 }
+
+
+@media (max-width: 576px) {
+  /* Stack gallery images 2 per row */
+  #gallery .row > [class*="col-6"] {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Ensure proper spacing and responsive images */
+  #gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  #gallery .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #gallery p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* View More Button */
+  #gallery .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  /* Reduce gap between items if needed */
+  #gallery .g-3 {
+    --bs-gutter-x: 0.75rem;
+    --bs-gutter-y: 1rem;
+  }
+}
