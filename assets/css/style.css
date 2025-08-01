@@ -23,7 +23,7 @@ html[data-theme="dark"] {
 }
 
 * { box-sizing: border-box;
-outline: 1px solid red; }
+outline: 1px solid darkblue; }
 html, body { height: 100%; scroll-behavior: smooth; }
 body {
   background: var(--bg);
@@ -51,6 +51,7 @@ body {
   backface-visibility: hidden;
   transform: translateZ(0);
   will-change: transform, opacity;
+  overflow-x: hidden;
 }
 
 /* Make sure toggle icons don’t jump */
