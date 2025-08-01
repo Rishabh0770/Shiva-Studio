@@ -751,3 +751,51 @@ footer .container {
     --bs-gutter-y: 1rem;
   }
 }
+
+
+@media (max-width: 576px) {
+  /* Section Title & Subtitle */
+  #testimonials .section-title {
+    font-size: 1.6rem;
+  }
+
+  #testimonials p.text-muted {
+    font-size: 1rem;
+  }
+
+  /* Testimonial Card */
+  #testimonials .card {
+    padding: 1.25rem 1rem;
+  }
+
+  #testimonials .card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  #testimonials .card h6 {
+    font-size: 1rem;
+  }
+
+  #testimonials .card small {
+    font-size: 0.85rem;
+  }
+
+  #testimonials .card p {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+
+  /* Carousel Indicators */
+  #testimonials .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+  }
+
+  /* Carousel Controls */
+  #testimonials .carousel-control-prev-icon,
+  #testimonials .carousel-control-next-icon {
+    background-size: 80% 80%;
+  }
+}
