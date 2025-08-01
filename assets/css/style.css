@@ -612,123 +612,57 @@ footer .container {
 /* Utilities */
 .shadow-sm { box-shadow: 0 6px 24px rgba(0,0,0,.08) !important; }
 .rounded-3 { border-radius: 1rem !important; }
+
 /* Reduce motion preference */
 @media (prefers-reduced-motion: reduce) {
-  [data-aos] {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
+  [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
 
-/* Mobile styles for screens ≤576px */
+
 @media (max-width: 576px) {
-  /* Section padding tighter on small screens */
-  .section-padding {
-    padding: 60px 0;
-  }
-
-  /* Hero Section Text Scaling */
-  .hero-section h1,
-  .section-title {
-    font-size: 1.5rem;
-  }
-
-  .hero-section p,
-  .section-padding p,
-  .section-padding .lead,
-  .section-padding .card-text {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  /* Navbar */
-  .navbar {
-    padding-inline: 0.75rem;
-  }
-
-  .navbar-toggler {
-    padding: 0.75rem;
-  }
-
-  .navbar-brand {
-    font-size: 1.1rem;
-    white-space: nowrap;
-  }
-
-  .navbar .nav-link {
-    font-size: 0.9rem;
-    padding: 0.25rem 0.75rem;
-  }
-
-  /* Button Styling */
-  button,
-  .btn,
-  .gallery-btn,
-  .btn-theme-toggle {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.25rem;
-    margin-left: 0.5rem;
-  }
-
-  .gallery-btn,
-  .btn-hover-zoom,
-  .btn-outline-light:hover {
-    animation: none !important; /* Disable animations on mobile */
-  }
-
-  /* Service cards full width */
-  .service-card {
-    min-width: 100%;
-  }
-
-  /* Testimonials card layout fix */
-  #testimonials .card {
-    max-width: 90%;
-    padding: 1rem;
-    font-size: 0.9rem;
-    min-height: auto;
-  }
-
-  /* Carousel arrows reposition */
-  #testimonials .carousel-control-prev {
-    left: 10px;
-  }
-
-  #testimonials .carousel-control-next {
-    right: 10px;
-  }
-
-  /* Gallery column full width */
+  .section-padding { padding: 60px 0; }
+  .hero-section h1 { font-size: 2rem; }
+  .hero-section p { font-size: 1rem; }
+  .navbar-toggler { padding: 0.75rem; }
   #galleryGrid .col-6 {
     flex: 0 0 100%;
     max-width: 100%;
   }
-
-  /* Equipment card hover scale */
   .equip-card:hover {
     transform: scale(1.01) translateY(-2px);
   }
-
-  /* Row item spacing */
-  .row > [class^="col-"] {
-    margin-bottom: 1rem;
+  .gallery-btn, .btn-hover-zoom, .btn-outline-light:hover {
+    animation: none !important;
   }
-
-  /* Footer layout */
   footer .container {
     padding: 1rem;
     flex-direction: column;
   }
-
-  /* Social icon spacing */
   .social-link {
     margin: 4px;
   }
 }
 
+@media (max-width: 576px) {
+  .navbar {
+    padding-inline: 0.75rem;
+  }
 
-/* Tablet and above */
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .btn-theme-toggle {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    min-width: 100%;
+  }
+}
+
 @media (min-width: 768px) {
   .hero-content h1 {
     font-size: 3rem;
