@@ -56,20 +56,16 @@ body {
 .navbar-toggler {
   border: none;
   padding: 0.5rem;
-  margin-left: auto;
-  margin-right: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: none !important; /* Prevents accidental animation */
-  transform: none !important;  /* Prevents animation leaking */
+  margin-left: 65px; /* Adjust this value as needed */
+  animation: none !important;
+  transform: none !important
 }
-
 
 @media (max-width: 768px) {
   .navbar-toggler {
     margin-left: auto;
-    margin-right: 1rem;
+    animation: none !important;
+  transform: none !important
   }
 }
 
