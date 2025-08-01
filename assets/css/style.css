@@ -9,6 +9,9 @@
   --border: rgba(0,0,0,.08);
   --section-title-color: #5fb6ff;
   --placeholder: #6c757d;
+  --navbar-bg: rgba(255, 255, 255, 0.7); /* white with 70% opacity */
+  --navbar-text: #000000;
+  --navbar-hover: #ff6f61;
 }
 
 html[data-theme="dark"] {
@@ -20,10 +23,12 @@ html[data-theme="dark"] {
   --accent-600: #5fb6ff;
   --border: rgba(255,255,255,.1);
   --placeholder: #a3a3a3;
+  --navbar-bg: rgba(0, 0, 0, 0.7); /* black with 70% opacity */
+  --navbar-text: #ffffff;
+  --navbar-hover: #ff6f61;
 }
 
-* { box-sizing: border-box;
-outline: 1px solid yellow; }
+* { box-sizing: border-box; }
 html, body { width: 100%;
   overflow-x: hidden; scroll-behavior: smooth; }
 body {
@@ -106,6 +111,28 @@ html[data-theme="dark"] .navbar-toggler-icon {
 html[data-theme="dark"] .navbar-toggler:hover {
   background-color: #ff6f61; /* subtle hover glow */
 }
+.theme-navbar {
+  background-color: var(--navbar-bg) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+
+.theme-navbar .navbar-brand,
+.theme-navbar .nav-link,
+.theme-navbar .btn-theme-toggle i {
+  color: var(--navbar-text) !important;
+  transition: color 0.3s ease;
+}
+
+.theme-navbar .nav-link:hover,
+.theme-navbar .navbar-brand:hover,
+.theme-navbar .btn-theme-toggle i:hover {
+  color: var(--navbar-hover) !important;
+}
+
 
 /* Nav Links */
 .navbar .nav-link {
@@ -136,19 +163,6 @@ html[data-theme="dark"] .navbar-toggler:hover {
   opacity: 1;
 }
 
-/* Brand Link */
-.navbar .navbar-brand {
-  color: var(--text);
-}
-
-.brand-hover {
-  color: #ffffff;
-  transition: color 0.3s ease;
-}
-
-.brand-hover:hover {
-  color: #ff6f61;
-}
 
 /* Custom button for theme toggle */
 .btn-theme-toggle {
@@ -160,7 +174,7 @@ html[data-theme="dark"] .navbar-toggler:hover {
 
 /* Hover effect */
 .btn-theme-toggle:hover {
-  background-color: #ff6f61;
+  border-radius: 4px;
   color: #ffffff;
   border-color: #ff6f61;
 }
@@ -610,49 +624,4 @@ footer .container {
 /* Reduce motion preference */
 @media (prefers-reduced-motion: reduce) {
   [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
-}
-
-
-/* Fix horizontal scroll on mobile */
-body {
-  overflow-x: hidden;
-}
-
-/* Navbar flickering fix */
-.navbar {
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
-/* Carousel responsiveness */
-.carousel-inner,
-.carousel-item {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* Make navbar container full-width without affecting global layout */
-.navbar > .container {
-  width: 100%;
-  max-width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  box-sizing: border-box;
-}
-
-/* Prevent Google Map from hijacking scroll on mobile */
-@media (max-width: 768px) {
-  .map-iframe {
-    pointer-events: none;
-  }
-}
-
-/* Responsive hero text and spacing */
-@media (max-width: 576px) {
-  .hero-section h1 {
-    font-size: 2rem;
-  }
-  .section-padding {
-    padding: 60px 15px;
-  }
 }
