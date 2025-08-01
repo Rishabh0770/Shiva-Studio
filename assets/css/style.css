@@ -793,9 +793,74 @@ footer .container {
     margin: 0 4px;
   }
 
+  #testimonials .carousel-indicators {
+  position: absolute;
+  bottom: -11.2px; /* pushes them lower than the carousel */
+}
+
   /* Carousel Controls */
   #testimonials .carousel-control-prev-icon,
   #testimonials .carousel-control-next-icon {
     background-size: 80% 80%;
+  }
+}
+
+
+@media (max-width: 576px) {
+  #equipments .equip-card {
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  #equipments .equip-card i {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #equipments .equip-card h6 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  #equipments ul {
+    padding-left: 0;
+  }
+
+  #equipments ul li {
+    font-size: 0.9rem;
+    padding: 4px 0;
+  }
+
+  /* Optional: Add spacing between rows of cards on mobile */
+  #equipments .col-md-6 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact .form-control, 
+  #contact textarea {
+    font-size: 0.9rem;
+  }
+
+  #contact .btn {
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+  }
+
+  #contact iframe {
+    min-height: 260px;
+  }
+
+  #contact .social-link i {
+    font-size: 1.1rem;
+  }
+
+  #contact .social-link {
+    padding: 0.35rem 0.5rem;
+  }
+
+  #contact small {
+    font-size: 0.85rem;
   }
 }
