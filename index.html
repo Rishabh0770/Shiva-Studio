@@ -63,35 +63,34 @@
 </head>
 
 <body>
-
- <!-- ======= Navbar ======= -->
- <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-body-blur border-bottom">
-  <div class="container d-flex align-items-center justify-content-between flex-nowrap px-2">
-    <!-- Left: Logo + Theme Toggle -->
-    <div class="d-flex align-items-center flex-shrink-1">
-      <a class="navbar-brand fw-bold brand-hover me-2" href="index.html"><strong>Shiva Studio</strong></a>
-      <button id="themeToggle" class="btn btn-theme-toggle btn-sm ms-2" aria-label="Toggle theme">
-        <i class="fa-solid fa-moon"></i>
+  <!-- ======= Navbar ======= -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-body-blur border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold brand-hover" href="#home"><strong>Namu Studio</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
+
+      <div class="d-flex align-items-center gap-2 order-lg-2">
+        <button id="themeToggle" class="btn btn-theme-toggle btn-sm" aria-label="Toggle theme">
+  <i class="fa-solid fa-moon"></i>
+</button>
+
+      </div>
+
+      <div class="collapse navbar-collapse order-lg-1" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#equipments">Equipments</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <!-- Hamburger -->
-    <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Nav Links -->
-    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-        <li class="nav-item"><a class="nav-link" href="#equipments">Equipments</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
 
   <!-- ======= Hero / Home ======= -->
   <section id="home" class="hero-section position-relative">
