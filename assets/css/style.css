@@ -29,8 +29,7 @@ html[data-theme="dark"] {
 * {
   box-sizing: border-box;
   }
-html, body { height: 100%; scroll-behavior: smooth;
-outline: 1px solid red;}
+html, body { height: 100%; scroll-behavior: smooth;}
 body {
   background: var(--bg);
   color: var(--text);
@@ -52,9 +51,15 @@ body {
   color: var(--section-title-color) !important;
 }
 
-.navbar{
+.navbar {
   width: 100%;
-  max-width: 100%;
+  overflow-x: hidden; /* Optional, only if there's overflow */
+  box-sizing: border-box;
+}
+
+.container {
+  /* Let Bootstrap handle container width and padding */
+  max-width: 100%; /* Optional: remove this if using Bootstrap's default breakpoints */
   box-sizing: border-box;
 }
 
@@ -223,6 +228,10 @@ html[data-theme="dark"] .navbar-toggler:hover {
 .hero-bg.active {
   opacity: 1;
   z-index: -1;
+}
+
+.hero-section {
+  padding-top: 100px; /* Adjust based on navbar height */
 }
 
 /* Gradient Overlay */
