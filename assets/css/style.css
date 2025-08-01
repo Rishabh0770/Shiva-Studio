@@ -28,9 +28,8 @@ html[data-theme="dark"] {
 
 * {
   box-sizing: border-box;
-  outline: 1px dashed red; /* For debugging only */
   }
-html, body { height: 100%; scroll-behavior: smooth; }
+html, body { height: 100%; scroll-behavior: smooth;}
 body {
   background: var(--bg);
   color: var(--text);
