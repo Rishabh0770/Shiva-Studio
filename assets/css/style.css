@@ -51,7 +51,12 @@ body {
   color: var(--section-title-color) !important;
 }
 
-
+.navbar, .container{
+  width: 100%;
+  max-width: 100%;
+  
+  box-sizing: border-box;
+}
 
 #mainNavbar {
   position: fixed;
