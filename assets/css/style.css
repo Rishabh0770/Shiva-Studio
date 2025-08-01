@@ -26,9 +26,8 @@ html[data-theme="dark"] {
    --hover-accent: #ff6f61; /* Optional override */
 }
 
-* {
-  box-sizing: border-box;
-  }
+* { box-sizing: border-box;
+outline: 1px solid red; }
 html, body { height: 100%; scroll-behavior: smooth;}
 body {
   background: var(--bg);
@@ -51,10 +50,9 @@ body {
   color: var(--section-title-color) !important;
 }
 
-.navbar, .container{
+.navbar{
   width: 100%;
-  max-width: 100%;
-  
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
