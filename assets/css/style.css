@@ -368,7 +368,7 @@ html[data-theme="dark"] .navbar-toggler:hover {
 }
 
 #fullGallery {
-  margin-top: 45px; /* Adjust this to match your navbar height */
+  margin-top: px; /* Adjust this to match your navbar height */
 }
 .btn-accent {
   --bs-btn-bg: var(--accent);
