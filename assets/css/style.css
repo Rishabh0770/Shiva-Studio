@@ -34,7 +34,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Inter, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  
+  overflow-x: hidden;
 }
 
 .section-padding p,
@@ -51,10 +51,9 @@ body {
   color: var(--section-title-color) !important;
 }
 
-.navbar{
+.navbar, .container{
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
   box-sizing: border-box;
 }
 
